@@ -9,7 +9,7 @@
 				<?php if (have_posts()) : the_post(); ?>
 					<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 					<?php $id = the_ID(); ?>
-					<p class="test">array_change_key_case</p>
+					<p>firstcommit</p>
 						<p><?php var_dump($id); ?></p>
 						<h2 class="entry-title"><?php the_title(); ?></h2>
 				
