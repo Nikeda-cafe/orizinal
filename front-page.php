@@ -4,15 +4,14 @@
 		<div id="content" role="main">
 		
 		<?php if ( 'page' == get_option('show_on_front') ): ?>
-
+			<p><?php echo get_option("show_on_front"); ?></p>
+			<p><?php echo get_option("blog_charset"); ?></p>
+			<p><?php echo get_option("home"); ?></p>
+			<p><?php echo get_option("language_attribute"); ?></p>
 			<div class="sof">
 				<?php if (have_posts()) : the_post(); ?>
 					<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-					<?php $id = the_ID(); ?>
-					<p>firstcommit</p>
-						<p><?php var_dump($id); ?></p>
 						<h2 class="entry-title"><?php the_title(); ?></h2>
-				
 						<div class="entry-content">
 							<?php the_content(); ?>
 						</div>

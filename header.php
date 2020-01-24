@@ -32,7 +32,7 @@
 			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 			<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 			<?php 
-                if (has_custom_logo()) : //カスタムロゴがある場合はロゴを表示 ?>
+                if (!has_custom_logo()) : //カスタムロゴがある場合はロゴを表示 ?>
                     <<?php echo $heading_tag; ?> class="site-title logo"><?php the_custom_logo(); ?></<?php echo $heading_tag; ?>>
                 <?php else: //ロゴがない場合はサイト名を表示 ?>
                 <<?php echo $heading_tag; ?> class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></<?php echo $heading_tag; ?>>
